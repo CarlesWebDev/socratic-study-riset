@@ -46,10 +46,18 @@
 - Google Gemini API Key (dapatkan dari [Google AI Studio](https://aistudio.google.com/))
 
 ---
-
 ### 2. Jalankan Backend Server
-Buka terminal dan arahkan ke dalam folder `server`, instal dependensi, dan atur API key Anda:
+Masuk ke folder `server`, install dependensi, dan atur API key Anda:
 
 ```bash
 cd server
 npm install
+
+```
+
+### 3. Jalankan Frontend
+Masuk ke folder `client`:
+
+```bash
+cd client
+Gunakan Extension live preview
