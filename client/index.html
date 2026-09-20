@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socratic — AI Study & Research Companion</title>
+    <meta
+      name="description"
+      content="Socratic adalah asisten belajar pintar dan akselerator produktivitas akademik. Pahami konsep rumit secara mendalam dengan metode Socratic."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.8/dist/purify.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container header-content">
+        <div class="logo">
+          <i class="fa-solid fa-brain"></i>
+          <span>Socratic</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#features">Fitur</a>
+          <a href="#methodology">Metodologi</a>
+        </nav>
+        <button class="btn btn-outline btn-sm" onclick="toggleChat()">
+          Coba Socratic Ai Sekarang
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Hero -->
+      <section class="hero">
+        
+        <h1>
+          Pahami Konsep Rumit <br /><span class="text-accent"
+            >Secara Mendalam.</span
+          >
+        </h1>
+        <p>
+          Socratic dirancang khusus sebagai pendamping riset dan belajar Anda.
+          Bukan sekadar chatbot biasa, ini adalah akselerator intelektual yang
+          membongkar kompleksitas melalui dialog terstruktur.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center">
+          <button class="btn btn-primary btn-lg" onclick="toggleChat()">
+            Mulai Sesi Belajar
+          </button>
+          <a href="#features" class="btn btn-outline btn-lg"
+            >Pelajari Metode Kami</a
+          >
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features">
+        <h2 class="section-title">Akselerator Produktivitas Akademik</h2>
+        <div class="grid-container">
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-microscope"></i></div>
+            <h3>Analisis Mendalam</h3>
+            <p>
+              Membedah jurnal penelitian, teori kompleks, atau masalah teknis
+              menjadi komponen logis yang mudah dicerna.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i class="fa-solid fa-clipboard-question"></i>
+            </div>
+            <h3>Metode Socratic</h3>
+            <p>
+              Membantu Anda menemukan jawaban sendiri melalui serangkaian
+              pertanyaan strategis yang menguji pemahaman (Feynman Technique).
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-sitemap"></i></div>
+            <h3>Strukturisasi Ide</h3>
+            <p>
+              Ubah kerangka pikiran yang abstrak menjadi draf esai, struktur
+              kode, atau rencana proyek yang sistematis.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Prompts -->
+      <section id="methodology">
+        <h2 class="section-title">Mulai Eksplorasi Intelektual</h2>
+        <div class="grid-container">
+          <div
+            class="prompt-card"
+            onclick="
+              startWithPrompt(
+                'Jelaskan mekanika kuantum dengan analogi sederhana yang bisa dipahami siswa SMA, fokus pada konsep superposisi.',
+              )
+            "
+          >
+            <span class="badge">Sains & Fisika</span>
+            <p>
+              "Jelaskan mekanika kuantum dengan analogi sederhana, fokus pada
+              konsep superposisi."
+            </p>
+            <span class="action">Tanyakan ke Socratic →</span>
+          </div>
+          <div
+            class="prompt-card"
+            onclick="
+              startWithPrompt(
+                'Bantu saya menyusun kerangka logis untuk esai akademis tentang dampak AI generatif pada ekonomi kreatif global.',
+              )
+            "
+          >
+            <span class="badge">Riset & Penulisan</span>
+            <p>
+              "Bantu saya menyusun kerangka logis untuk esai akademis tentang
+              dampak AI pada ekonomi."
+            </p>
+            <span class="action">Tanyakan ke Socratic →</span>
+          </div>
+          <div
+            class="prompt-card"
+            onclick="
+              startWithPrompt(
+                'Gunakan metode Socratic untuk menguji pemahaman saya tentang arsitektur Microservices. Mulailah dengan menanyakan definisi dasar saya.',
+              )
+            "
+          >
+            <span class="badge">Ilmu Komputer</span>
+            <p>
+              "Gunakan metode Socratic untuk menguji pemahaman saya tentang
+              arsitektur Microservices."
+            </p>
+            <span class="action">Tanyakan ke Socratic →</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2026 Socratic AI Companion. Didesain untuk kecerdasan
+          intelektual.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Chat Launcher -->
+    <div class="chat-launcher" id="chat-launcher" onclick="toggleChat()">
+      <i class="fa-solid fa-brain"></i>
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chat-widget">
+      <!-- Header -->
+      <div class="widget-header">
+        <div class="widget-title">
+          <div class="widget-avatar"><i class="fa-solid fa-brain"></i></div>
+          <div class="widget-info">
+            <h4>Socratic AI</h4>
+            <p>Tutor Akademik</p>
+          </div>
+        </div>
+        <div class="widget-controls">
+          <button onclick="toggleHistory()" title="Riwayat Sesi">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </button>
+          <button onclick="createNewSession()" title="Sesi Baru">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <button onclick="toggleChat()" title="Tutup">
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- History Drawer -->
+      <div class="history-drawer" id="history-drawer">
+        <div class="drawer-header">
+          <h3>Riwayat Belajar</h3>
+          <button onclick="toggleHistory()">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="session-list" id="session-list">
+          <!-- Sessions will be populated here -->
+        </div>
+      </div>
+
+      <!-- Chat Area -->
+      <div class="chat-area" id="chat-area">
+        <!-- Messages will appear here -->
+      </div>
+
+      <!-- Typing Indicator -->
+      <div class="typing" id="typing-indicator">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+
+      <!-- Input Area -->
+      <form class="input-area" id="chat-form">
+        <div class="input-wrapper">
+          <textarea
+            id="user-input"
+            rows="1"
+            placeholder="Diskusikan topik riset Anda di sini..."
+            required
+          ></textarea>
+          <button type="submit" class="send-btn" id="send-btn" title="Kirim">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+        <div class="input-footer">
+          <i
+            class="fa-solid fa-lock"
+            style="font-size: 0.6rem; margin-right: 4px"
+          ></i>
+          Data riset tersimpan secara lokal di peramban Anda.
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
